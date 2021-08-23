@@ -1,0 +1,146 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::ng-deep body {
+  margin: 0px !important;
+}
+
+.container {
+  display: flex;
+  margin: 0px !important;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  background-color: #6B5B95;
+  color: white;
+  padding: 0 20px;
+
+  h1 {
+    margin: 50px 0 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .name-info,
+  .contact-info,
+  .formation-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+
+  .name-info h3 {
+    margin-top: 5px;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: calc(100vw - 280px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #B2A4D0;
+
+  .professional-info {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card {
+  border-radius: 4px;
+  border: 1px solid #65428A;
+  background-color: #BCAFCF;
+  margin: 0 25px 35px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 24px;
+  flex: 1;
+
+  span {
+    font-size: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  align-self: center;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+  .card-container > *:not(.circle-link) ,
+  .terminal {
+    width: 100%;
+  }
+
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+
+  svg#rocket-smoke {
+    right: 120px;
+    transform: rotate(-5deg);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  svg#rocket-smoke {
+    display: none;
+    visibility: hidden;
+  }
+}
